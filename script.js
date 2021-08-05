@@ -20,7 +20,7 @@ subBtn.addEventListener('click', (index) => {
         formAlert.innerText=`Please Enter the your name!!`
         setTimeout(function () {
             formAlert.style.display = 'none';
-        }, 1000);
+        }, 2000);
     }
     
     else if (choiceVal == 'Choose...') {
@@ -29,7 +29,7 @@ subBtn.addEventListener('click', (index) => {
         formAlert.innerText=`Please Enter the choice value!!`
         setTimeout(function () {
             formAlert.style.display = 'none';
-        }, 1000);
+        }, 2000);
     }
     
     else if (authorVal == '') {
@@ -38,7 +38,7 @@ subBtn.addEventListener('click', (index) => {
         formAlert.innerText=`Please Enter the author value!!`
         setTimeout(function () {
             formAlert.style.display = 'none';
-        }, 1000);
+        }, 2000);
     }
     
     else if (yearVal == '') {
@@ -47,7 +47,7 @@ subBtn.addEventListener('click', (index) => {
         formAlert.innerText=`Please Enter the publishing year!!`
         setTimeout(function () {
             formAlert.style.display = 'none';
-        }, 1000);
+        }, 2000);
     }
     
     else {
@@ -96,7 +96,7 @@ function deleteFunction() {
             alertCard.style.display = 'block';
             setTimeout(function () {
                 alertCard.style.display = 'none';
-            }, 1000);
+            }, 2000);
         });
     });
 }
