@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-transform: capitalize;
+            overflow-x: hidden;
+        }
+        html{font-size: 100%;}
+        body {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .head {overflow-y: hidden;}
+        .form {width: 100vw;}
+        .formAlert {
+            display: none;
+            transition: .5s;
+            width: 60vw;
+        }
+        .input-group {width: 70vw;}
+        .btn:hover {color: black;}
+        .cardContainer {
+            width: 95vw;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .cardContainer .card {
+            width: 22rem;
+            margin: 2rem;
+            border: 10px solid black;
+        }
+        .cardContainer .card .delete {
+            background-color: maroon;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .alertCard {
+            width: 50vw;
+            display: none;
+            transition: .5s;
+        }
+        @media (max-width: 400px) {
+            html{font-size: 85%;}
+            .head {
+            font-size: 2rem;
+            margin-top: 2rem;
+            }
+            .formAlert {width: 70vw;}
+            .input-group {width: 90vw;}
+            .cardContainer .card {
+                width: 24rem;
+                border: 7px solid black;
+            }
+            .alertCard {width: 60vw;}
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <h1 class="head m-3 text-center text-white">Add your course plan</h1>
+    <div class="form d-flex align-items-center justify-content-center flex-column p-5">
+        <div class="formAlert alert alert-danger text-center" role="alert"></div>
+        <div class="input-group mb-3 border">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary bg-light" type="button">Name</button>
+            </div>
+            <input type="text" class="name-input form-control border-dark p-3" style="height: 3.5rem;"
+                placeholder="enter your name" aria-label="" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <div class=" input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+            <select class="choice-input custom-select" style="height: 3.5rem;" id="inputGroupSelect01">
+                <option value="" placeholder="Choose..." selected>Choose...</option>
+                <option value="App Development">App Development</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Python">Python</option>
+            </select>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary bg-light" type="button">Author</button>
+            </div>
+            <input type="text" class="author-input form-control border-dark" style="height: 3.5rem;"
+                placeholder="Enter author name" aria-label="" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3 border">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary bg-light" type="button">Year</button>
+            </div>
+            <input type="text" class="year-input form-control border-dark p-3" style="height: 3.5rem;"
+                placeholder="Enter Publish Year" aria-label="" aria-describedby="basic-addon1">
+        </div>
+        <button type="button" class="subBtn btn btn-info" style="width: 10rem; font-weight: bolder;">Submit</button>
+    </div>
+    <div class="alertCard text-center alert alert-primary" role="alert">card deleted</div>
+    <div class="cardContainer"></div>
+    <script src="script.js"></script>
+</body>
+</html>
